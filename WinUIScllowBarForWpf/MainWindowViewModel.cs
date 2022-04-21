@@ -23,7 +23,7 @@ namespace WinUIScllowBarForWpf
             Random random = new Random();　　//放循环体外初始化
             string _zimu = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";//要随机的字母
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 string _result = "";
                 for (int j = 0; j < 6; j++) //循环6次，生成6位数字，10位就循环10次
