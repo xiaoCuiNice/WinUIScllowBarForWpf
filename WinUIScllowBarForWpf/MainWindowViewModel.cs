@@ -31,7 +31,7 @@ namespace WinUIScllowBarForWpf
                     _result += _zimu[random.Next(52)]; //通过索引下标随机
 
                 }
-                DataSource.Add(new Data { Index = i + 1, Id = random.Next(100, 1000).ToString(), Name = _result });
+                DataSource.Add(new Data { Index = i + 1, Id = random.Next(100, 1000).ToString(), Name = _result, GirdInfo = random.Next(100, 1000).ToString() ,X1 = random.Next(10000, 1000000) });
             }
 
 
@@ -57,5 +57,9 @@ namespace WinUIScllowBarForWpf
         public string Name { get; set; }
 
         public string Id { get; set; }
+
+        public string GirdInfo { get; set; }
+
+        public int X1 { get; set; }
     }
 }
