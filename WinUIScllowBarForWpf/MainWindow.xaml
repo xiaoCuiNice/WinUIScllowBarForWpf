@@ -407,7 +407,7 @@
         <Style TargetType="ScrollBar" BasedOn="{StaticResource for_scrollbar}"/>
 
         <!--默认ScrollView-->
-        <Style TargetType="ScrollViewer" BasedOn="{StaticResource for_scrollviewer}"/>
+        <!--<Style TargetType="ScrollViewer" BasedOn="{StaticResource for_scrollviewer}"/>-->
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -417,7 +417,7 @@
             <ColumnDefinition Width="20"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid Style="{DynamicResource DataGridStyle}" Width="400" VerticalScrollBarVisibility="Visible" ItemsSource="{Binding DataSource}" AutoGenerateColumns="False" CanUserAddRows="False">
+        <DataGrid VerticalScrollBarVisibility="Visible" ItemsSource="{Binding DataSource}" AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="序号" Binding="{Binding Index}" Width="200"/>
                 <DataGridTextColumn Header="姓名" Binding="{Binding Name}" Width="200"/>
@@ -426,9 +426,9 @@
                 <DataGridTextColumn Header="X1" Binding="{Binding X1}" Width="200"/>
             </DataGrid.Columns>
         </DataGrid>
-        <ListView ItemsSource="{Binding DataSource}" Grid.Column="2">
+        <ListView ItemsSource="{Binding DataSource}" Style="{StaticResource MaterialDesignListView}" Grid.Column="2">
             <ListView.View>
-                <GridView>
+                <GridView ColumnHeaderContainerStyle="{StaticResource DefaultGridViewColumnHeader}">
                     <GridViewColumn Header="序号" DisplayMemberBinding="{Binding Index}" Width="100"/>
                     <GridViewColumn Header="姓名" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="工号" DisplayMemberBinding="{Binding Id}" />
